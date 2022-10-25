@@ -5,6 +5,6 @@ Fast api support :<br>
   - requests
   - background tasks
   - Redis stream foe message broker
-links:
-https://fastapi.tiangolo.com/
+links:<br>
+https://fastapi.tiangolo.com/<br>
 https://redis.com/blog/introducing-redis-om-for-python/
