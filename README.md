@@ -4,7 +4,7 @@ Fast api support :<br>
   - async calls 
   - requests
   - background tasks
-  - Redis stream foe message broker
+  - Redis stream foe message broker<br>
 links:<br>
 https://fastapi.tiangolo.com/<br>
 https://redis.com/blog/introducing-redis-om-for-python/
