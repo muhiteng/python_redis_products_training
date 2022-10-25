@@ -3,7 +3,12 @@ from typing import Union
 from fastapi import FastAPI
 from redis-om import redis_connection,HashModel
 from fastapi.middleware.cors import CORSMiddleware
+from starlette.requests import Request
+from fastapi.background import BackgroundTasks 
+import requests,time
+
 app = FastAPI()
+
 app.add_middleware(
     CORSMiddleware,
     allow_origins=['*'],
@@ -17,6 +22,7 @@ redis=get_redis_connection(
     password="RLgCjAgK5MJ8YFJ6XQ56VZPxdUpVNNCA",
     decose_responses=true
 );
+
 class Product(HashModel):
     name:str
     price:float
@@ -49,8 +55,8 @@ def create(product:Product):
 
 @app.get("/products/{pk}")
 def get(pk:str):
-    return product.get(pk);
+    return Product.get(pk);
 
 @app.delete("/products/{pk}")
 def get(pk:str):
-    return product.delete(pk);
+    return Product.delete(pk);
