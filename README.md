@@ -3,3 +3,4 @@ Fast api support :<br>
   - async calls 
   - requests
   - background tasks
+  - Redis stream foe message broker
